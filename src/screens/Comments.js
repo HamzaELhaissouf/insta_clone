@@ -1,16 +1,18 @@
 import React from 'react';
-import {View, StyleSheet, FlatList} from 'react-native';
-import {posts} from '../../Data';
-import Post from './Post';
+import {View, Text, ListView, FlatList, StyleSheet} from 'react-native';
+import {commnets} from '../Data';
+import Comment from '../compontents/feed/Comment';
 
-const Feed = () => {
+const Comments = () => {
   return (
     <FlatList
       showsVerticalScrollIndicator={false}
       contentContainerStyle={styles.feed}
       keyExtractor={(item) => item.id.toString()}
-      data={posts}
-      renderItem={({item}) => <Post key={item.id} keyExtractor post={item} />}
+      data={commnets}
+      renderItem={({item}) => (
+        <Comment key={item.id} keyExtractor comment={item} />
+      )}
       ListFooterComponent={<View style={styles.footer} />}
     />
   );
@@ -18,10 +20,10 @@ const Feed = () => {
 const styles = StyleSheet.create({
   feed: {
     height: 'auto',
-    padding: 5,
+    padding: 6,
   },
   footer: {
     width: 15,
   },
 });
-export default Feed;
+export default Comments;

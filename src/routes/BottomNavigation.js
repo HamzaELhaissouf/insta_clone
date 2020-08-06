@@ -8,7 +8,7 @@ const Tab = createBottomTabNavigator();
 
 const BottomNavigation = () => (
   <Tab.Navigator
-    initialRouteName="Search"
+    initialRouteName="Hoom"
     tabBarOptions={{
       keyboardHidesTabBar: true,
       activeTintColor: colors.grey3,

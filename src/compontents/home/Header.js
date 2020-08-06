@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {Icon} from 'react-native-elements';
 
 const Header = () => {
@@ -9,14 +9,12 @@ const Header = () => {
         onPress={() => alert('This is a button!')}
         title="Info"
         color="#fff">
-        <View>
-          <Icon
-            name="camera-outline"
-            type="ionicon"
-            size={36}
-            style={{marginLeft: 12}}
-          />
-        </View>
+        <Icon
+          name="camera-outline"
+          type="ionicon"
+          size={36}
+          style={{marginLeft: 12}}
+        />
       </TouchableOpacity>
       <Text style={styles.logo}>Instagram</Text>
 
@@ -24,14 +22,12 @@ const Header = () => {
         onPress={() => alert('This is a button!')}
         title="Info"
         color="#fff">
-        <View>
-          <Icon
-            name="paper-plane-outline"
-            type="ionicon"
-            size={32}
-            style={{marginRight: 12}}
-          />
-        </View>
+        <Icon
+          name="paper-plane-outline"
+          type="ionicon"
+          size={32}
+          style={{marginRight: 12}}
+        />
       </TouchableOpacity>
     </View>
   );
